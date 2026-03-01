@@ -1,17 +1,20 @@
 :root {
   color-scheme: light;
-  --bg: #f3f6f8;
+  --bg: #f8f9fc;
   --surface: #ffffff;
-  --surface-muted: #eef3f6;
-  --text: #173042;
-  --text-soft: #496273;
-  --line: #cfe0e9;
-  --accent: #0a7c86;
-  --accent-soft: #e5f7f8;
-  --warning: #7a3d10;
+  --surface-muted: #f2f4f8;
+  --surface-tint: #e8edf5;
+  --text: #1a212a;
+  --text-soft: #5f6772;
+  --line: #e6e9ef;
+  --accent: #0a84ff;
+  --accent-secondary: #00bcd4;
+  --accent-soft: rgba(10, 132, 255, 0.1);
+  --accent-soft-secondary: rgba(0, 188, 212, 0.1);
+  --warning: #8a4b00;
   --max-width: 940px;
   --radius: 18px;
-  --shadow: 0 14px 36px rgba(23, 48, 66, 0.08);
+  --shadow: 0 18px 44px rgba(16, 20, 24, 0.08);
 }
 
 * {
@@ -28,8 +31,9 @@ body {
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", sans-serif;
   background:
-    radial-gradient(circle at top left, #dff6f5 0, transparent 30%),
-    linear-gradient(180deg, #f8fbfc 0%, var(--bg) 100%);
+    radial-gradient(circle at top left, rgba(10, 132, 255, 0.12) 0, transparent 28%),
+    radial-gradient(circle at top right, rgba(0, 188, 212, 0.1) 0, transparent 24%),
+    linear-gradient(180deg, #fbfcff 0%, var(--bg) 100%);
   color: var(--text);
   line-height: 1.65;
 }
@@ -45,7 +49,13 @@ a {
 }
 
 .hero {
-  background: var(--surface);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(10, 132, 255, 0.08),
+      rgba(0, 188, 212, 0.05)
+    ),
+    var(--surface);
   border: 1px solid var(--line);
   border-radius: calc(var(--radius) + 6px);
   box-shadow: var(--shadow);
@@ -58,16 +68,18 @@ a {
   gap: 10px;
   padding: 8px 12px;
   border-radius: 999px;
-  background: var(--accent-soft);
-  color: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+  color: #fff;
   font-size: 0.9rem;
   font-weight: 600;
+  box-shadow: 0 10px 24px rgba(10, 132, 255, 0.18);
 }
 
 .hero h1 {
   margin: 16px 0 12px;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.08;
+  letter-spacing: -0.03em;
 }
 
 .hero p {
@@ -84,10 +96,11 @@ a {
 }
 
 .hero-card {
-  background: var(--surface-muted);
+  background: rgba(255, 255, 255, 0.78);
   border: 1px solid var(--line);
   border-radius: 16px;
   padding: 16px;
+  backdrop-filter: blur(10px);
 }
 
 .hero-card strong,
@@ -123,9 +136,10 @@ a {
 }
 
 .lang-nav span {
-  background: var(--accent);
+  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
   color: #fff;
-  border-color: var(--accent);
+  border-color: transparent;
+  box-shadow: 0 8px 18px rgba(10, 132, 255, 0.16);
 }
 
 .lang-note {
@@ -158,6 +172,7 @@ a {
 .card h2 {
   margin: 0 0 12px;
   font-size: 1.35rem;
+  letter-spacing: -0.02em;
 }
 
 .card h3 {
@@ -176,7 +191,11 @@ a {
 
 .callout {
   border-left: 4px solid var(--accent);
-  background: var(--accent-soft);
+  background: linear-gradient(
+    135deg,
+    var(--accent-soft),
+    var(--accent-soft-secondary)
+  );
   padding: 14px 16px;
   border-radius: 12px;
   color: var(--text);
@@ -184,7 +203,7 @@ a {
 
 .callout.warning {
   border-left-color: #d97706;
-  background: #fff2df;
+  background: #fff4e5;
   color: var(--warning);
 }
 
@@ -215,7 +234,7 @@ td {
 }
 
 th {
-  background: var(--surface-muted);
+  background: var(--surface-tint);
 }
 
 .footer {
@@ -244,9 +263,13 @@ th {
 }
 
 .footer-nav span {
-  background: var(--accent-soft);
-  border-color: var(--accent-soft);
-  color: var(--accent);
+  background: linear-gradient(
+    135deg,
+    var(--accent-soft),
+    var(--accent-soft-secondary)
+  );
+  border-color: rgba(10, 132, 255, 0.08);
+  color: var(--text);
 }
 
 code {
@@ -254,7 +277,7 @@ code {
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     monospace;
   font-size: 0.92em;
-  background: #ecf3f7;
+  background: var(--surface-tint);
   padding: 0.14em 0.38em;
   border-radius: 6px;
 }
