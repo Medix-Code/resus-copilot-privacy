@@ -8,6 +8,7 @@
       name="description"
       content="Política de privacidad pública de Resus Copilot para Google Play y uso dentro de la app."
     />
+    <script defer src="../assets/policy.js"></script>
     <link rel="stylesheet" href="../assets/policy.css" />
   </head>
   <body>
@@ -35,12 +36,21 @@
             <strong>Contacto de privacidad</strong>
             <span>Repositorio público e incidencias</span>
           </div>
+          <div class="hero-card">
+            <strong>Responsable</strong>
+            <span>Medix-Code</span>
+          </div>
         </div>
         <nav class="lang-nav" aria-label="Idiomas disponibles">
           <span>ES</span>
-          <a href="./ca/">CA</a>
-          <a href="./en/">EN</a>
+          <a href="./ca/" data-lang="ca">CA</a>
+          <a href="./en/" data-lang="en">EN</a>
         </nav>
+        <p class="lang-note">
+          Si abres la URL base <code>/privacy/</code>, el idioma se intenta
+          seleccionar automáticamente según el navegador. Puedes cambiarlo
+          manualmente en cualquier momento desde la parte superior o el pie.
+        </p>
       </section>
 
       <div class="layout">
@@ -67,7 +77,7 @@
             </thead>
             <tbody>
               <tr>
-                <td>Datos de sesión y registro operativo</td>
+                <td>Datos operativos y de salud de la sesión</td>
                 <td>
                   Identificador interno de sesión, hora de inicio/fin, protocolo
                   elegido, peso, edad, ritmo, descargas, medicación,
@@ -219,6 +229,51 @@
         </section>
 
         <section class="card">
+          <h2>Información para usuarios de la UE, EEE, Reino Unido y Suiza</h2>
+          <div class="card-grid">
+            <div class="hero-card">
+              <strong>Responsable del tratamiento</strong>
+              <span>Medix-Code</span>
+            </div>
+            <div class="hero-card">
+              <strong>Bases jurídicas</strong>
+              <span>
+                Prestación de la funcionalidad que solicitas, interés legítimo
+                en seguridad y mantenimiento, y consentimiento cuando el sistema
+                operativo lo requiera para permisos opcionales.
+              </span>
+            </div>
+          </div>
+          <h3>Tus derechos</h3>
+          <p>
+            Si te encuentras en la UE, EEE, Reino Unido o Suiza, puedes solicitar
+            información sobre el tratamiento, oponerte cuando proceda, pedir
+            limitación, presentar reclamación ante tu autoridad de control y
+            ejercer derechos de acceso, rectificación o supresión en la medida
+            aplicable. Dado que la mayor parte de los datos permanecen solo en tu
+            dispositivo, muchos de esos derechos se ejercen directamente desde la
+            propia app, el sistema operativo o eliminando la app y sus datos.
+          </p>
+          <h3>Transferencias internacionales</h3>
+          <p>
+            Resus Copilot no realiza transferencias internacionales deliberadas
+            desde servidores propios porque no utiliza un backend del
+            desarrollador para almacenar sesiones. Si decides exportar o
+            compartir un informe con un tercero, esa transferencia dependerá del
+            servicio de destino que hayas escogido.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Menores y público previsto</h2>
+          <p>
+            La app no está dirigida a menores ni diseñada para uso recreativo.
+            Está orientada a profesionales sanitarios o usuarios con formación
+            adecuada en maniobras de reanimación.
+          </p>
+        </section>
+
+        <section class="card">
           <h2>Uso previsto</h2>
           <p>
             La app está orientada a profesionales sanitarios o usuarios con
@@ -241,9 +296,23 @@
             documentos asistenciales ni información sanitaria sensible en una
             incidencia pública.
           </div>
+          <div class="meta-list">
+            <div>
+              <strong>Canal recomendado</strong>
+              <span>
+                Usa la ficha de Google Play y los datos de contacto del
+                desarrollador si necesitas un canal privado.
+              </span>
+            </div>
+          </div>
         </section>
       </div>
 
+      <nav class="footer-nav" aria-label="Cambiar idioma">
+        <span>ES</span>
+        <a href="./ca/" data-lang="ca">Català</a>
+        <a href="./en/" data-lang="en">English</a>
+      </nav>
       <p class="footer">
         Esta página es la versión pública y no editable de la política de
         privacidad de Resus Copilot para Google Play y consulta desde la app.
