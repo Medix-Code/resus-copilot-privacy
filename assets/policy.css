@@ -234,6 +234,27 @@ a {
   margin-top: 12px;
 }
 
+.action-row {
+  margin: 14px 0 0;
+}
+
+.button-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 16px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+  box-shadow: 0 10px 24px rgba(10, 132, 255, 0.18);
+}
+
+.button-link:hover {
+  filter: brightness(1.03);
+}
+
 .meta-list strong {
   display: block;
   margin-bottom: 2px;
